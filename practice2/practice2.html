@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main" id="main">
+		<!-- 轮播图 -->
+		<div class="banner" id="banner">
+		<!-- 快捷写法a*3>div.banner-slide -->
+			<a href="javascript:;">
+				<div class="banner-slide slide1 slide-active" ></div>
+			</a>
+			<a href="javascript:;">
+				<div class="banner-slide slide2"></div>
+			</a>
+			<a href="javascript:;">
+				<div class="banner-slide slide3"></div>
+			</a>
+		</div>
+
+		<!--制作切换下一张和上一张的按钮-->
+		<a href="javascript:;" class="button prev" id="prev"></a>
+		<a href="javascript:;" class="button next" id="next"></a>
+
+		<!-- 制作圆点导航 -->
+		<div class="dots" id="dots">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+
+
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+
+</body>
+</html>

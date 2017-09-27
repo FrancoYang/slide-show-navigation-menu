@@ -1,0 +1,105 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style:none;
+}
+
+body{
+	font-family: "微软雅黑";
+	color:#14191e;
+}
+
+.main{
+	width: 1200px;
+	height:460px;
+	margin:30px auto;
+	overflow: hidden;  
+	/*同一时间只显示一张背景图片*/
+	position:relative;
+}
+
+.banner{
+	width: 1200px;
+	height:460px;
+	overflow: hidden;
+	position:relative; /*疑问：如果这里没定位会怎么样？*/
+}
+
+.banner-slide{
+	width: 1200px;
+	height:460px;
+	position:absolute;  /*疑问：如果这里没定位会怎么样？*/
+	background-repeat: no-repeat;
+	/*背景图片平铺*/
+	display:none;
+}
+
+.slide-active{
+	display: block;
+}
+
+.slide1{
+	background-image: url("../img/bg1.jpg");
+}
+
+.slide2{
+	background-image: url("../img/bg2.jpg");
+}
+
+.slide3{
+	background-image: url("../img/bg3.jpg");
+}
+
+.button{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	left: 244px;
+	top:50%;
+	margin-top:-40px; /*因为button本身有高度，如果没有这句的话，只有左上角上下居中，并非这个button居中*/
+	background:url(../img/arrow.png)  no-repeat center center;
+}
+
+.button:hover{
+	background-color: #333; /*注意这里不能用backgound，因为上面已经设置背景图片了，再用的话会把颜色覆盖背景图片的，因此要单独设置背景颜色*/
+	opacity:0.8; /*透明度设置*/
+	/*以下为了支持IE8及更早版本*/
+	filter:alpha(opacity=80);
+}
+
+.prev{
+	transform: rotate(180deg); /*CSS3里的属性，水平翻转*/
+}
+
+.next{
+	left:auto; /*因为在button在已经设置过left了，所以直接设置right没用了，因此要先把left改为auto*/
+	right:0;
+}
+
+.dots{
+	position:absolute;
+	right:20px;
+	bottom:24px;
+	text-align: right;
+
+}
+
+.dots span{
+	display: inline-block; /*要先把span变成块级元素后才能设置后续属性*/
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 50%; /*CSS3属性*/
+	background: rgba(7,17,27,0.4);
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;/*CSS3属性*/
+	margin-left: 8px;
+	cursor:pointer; /*使光标为手型*/
+}
+
+.dots span.active{
+	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+	background: #fff;
+}
