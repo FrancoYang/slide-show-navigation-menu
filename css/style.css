@@ -3,6 +3,21 @@
 	padding:0;
 }
 
+/*使用iconfont阿里巴巴矢量图标库*/
+@font-face{
+	font-family:"iconfont";
+	src:url("../img/font/iconfont.eot");
+	src:url("../img/font/iconfont.eot") format("embedded-opentype"),url("../img/font/iconfont.woff") format("woff"),url("../img/font/iconfont.ttf") format("truetype"),url("../img/font/iconfont.svg#iconfog") format("svg");
+}
+
+a{
+	text-decoration: none;
+}
+
+a:link,a:visited{
+	color:#5e5e5e;
+}
+
 ul{
 	list-style:none;
 }
@@ -102,4 +117,58 @@ body{
 .dots span.active{
 	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
 	background: #fff;
+}
+
+.menu-box{
+	width: 244px;
+	height: 460px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:rgba(7,17,27,0.5);
+	opacity:0.5;
+	z-index:1; /*因为被banner遮住了*/
+
+}
+
+.menu-content{
+	width: 244px;
+	height: 454px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;/*文字要放在半透明层上面*/
+	padding-top:6px;
+}
+
+.menu-item{
+	height: 64px;
+	line-height:66px;
+	font-size: 16px;
+	padding: 0 24px;
+	position: relative;
+}
+
+.menu-item a:link,menu-item a:visited{
+	color:#fff;
+}
+
+.menu-item a{
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	padding:0 8px;
+	height: 63px;
+
+}
+
+.menu-item i{
+	position:absolute;
+	right:32px;
+	font-size: 24px;
+	top:0;
+	font-family: "iconfont";
+	font-style: normal;
+	font-weight: normal;
+	color:rgba(255,255,255,0.5);
+
 }
