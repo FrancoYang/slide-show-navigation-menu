@@ -1,3 +1,4 @@
+//设置全局变量
 var index=0;
 var index2=0;
 var timer=null;
@@ -6,6 +7,10 @@ var len=pic.length;
 var dot=document.getElementById("dots").getElementsByTagName("span");
 var prev=document.getElementById("prev");
 var nextt=document.getElementById("next");
+var menu=document.getElementById("menu-content");
+var menuItems=menu.getElementsByClassName("menu-item");//IE8及以下浏览器不支持
+var subMenu=document.getElementById("sub-menu");
+var innerBox=subMenu.getElementsByClassName("inner-box");
 
 
 function slideImg(){
@@ -52,7 +57,33 @@ prev.onclick=function(){
 	changeImg();
 }
 
+	//制作导航菜单
+	for(var m=0;m<menuItems.length;m++){
+	menuItems[m].setAttribute("data-index",m);//这样更规范，直接用index等自定义属性会有兼容性问题
 
+	menuItems[m].onmouseover=function(){
+		subMenu.className="sub-menu";
+		var idx=this.getAttribute("data-index");
+		for(var j=0;j<innerBox.length;j++){
+			innerBox[j].style.display="none";
+			menuItems[j].style.background="none";
+		}
+		menuItems[idx].style.background="rgba(0,0,0,0.1)";
+		innerBox[idx].style.display="block";
+
+		}
+	}
+
+	menu.onmouseout=function(){
+		subMenu.className="sub-menu hide";
+	}
+
+	subMenu.onmouseover=function(){
+		this.className="sub-menu";
+	}
+	subMenu.onmouseout=function(){
+		this.className="sub-menu hide";
+	}
 }
 
 
