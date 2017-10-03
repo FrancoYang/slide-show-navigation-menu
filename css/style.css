@@ -39,13 +39,13 @@ body{
 	width: 1200px;
 	height:460px;
 	overflow: hidden;
-	position:relative; /*疑问：如果这里没定位会怎么样？*/
+	position:relative; 
 }
 
 .banner-slide{
 	width: 1200px;
 	height:460px;
-	position:absolute;  /*疑问：如果这里没定位会怎么样？*/
+	position:absolute; 
 	background-repeat: no-repeat;
 	/*背景图片平铺*/
 	display:none;
@@ -78,7 +78,8 @@ body{
 }
 
 .button:hover{
-	background-color: #333; /*注意这里不能用backgound，因为上面已经设置背景图片了，再用的话会把颜色覆盖背景图片的，因此要单独设置背景颜色*/
+	background-color: #333; 
+	/*注意这里不能用backgound，因为上面已经设置背景图片了，再用的话会把颜色覆盖背景图片的，因此要单独设置背景颜色*/
 	opacity:0.8; /*透明度设置*/
 	/*以下为了支持IE8及更早版本*/
 	filter:alpha(opacity=80);

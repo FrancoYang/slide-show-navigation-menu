@@ -8,7 +8,7 @@ var dot=document.getElementById("dots").getElementsByTagName("span");
 var prev=document.getElementById("prev");
 var nextt=document.getElementById("next");
 var menu=document.getElementById("menu-content");
-var menuItems=menu.getElementsByClassName("menu-item");//IE8及以下浏览器不支持
+var menuItems=menu.getElementsByClassName("menu-item");//注意IE8及以下浏览器不支持
 var subMenu=document.getElementById("sub-menu");
 var innerBox=subMenu.getElementsByClassName("inner-box");
 
