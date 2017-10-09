@@ -105,3 +105,15 @@ function changeImg(){
 
 
 slideImg();
+
+//开启弹出层
+document.getElementById("loginLink").onclick=function(){
+	document.getElementById("layer-mask").style.display="block";
+	document.getElementById("layer-pop").style.display="block";
+}
+
+//关闭弹出层
+document.getElementById("layer-close").onclick=function(){
+	document.getElementById("layer-mask").style.display="none";
+	document.getElementById("layer-pop").style.display="none";
+}
