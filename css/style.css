@@ -288,3 +288,24 @@ body{
 	background: #ccc;
 	color:#fff;
 }
+
+.login{
+	text-align: center;
+	margin:20px auto;
+}
+
+h4{
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.login input{
+	border:1px solid #ccc;
+	border-radius:3px;
+	padding:10px 5px;
+	width:250px;
+}
+
+.item span{
+	margin-right: 5px;
+}

@@ -106,6 +106,7 @@ function changeImg(){
 
 slideImg();
 
+//点击注册按钮
 //开启弹出层
 document.getElementById("loginLink").onclick=function(){
 	document.getElementById("layer-mask").style.display="block";
@@ -117,3 +118,5 @@ document.getElementById("layer-close").onclick=function(){
 	document.getElementById("layer-mask").style.display="none";
 	document.getElementById("layer-pop").style.display="none";
 }
+
+//注册按钮的原理是一样的，暂时就不做了
